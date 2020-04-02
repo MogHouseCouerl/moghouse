@@ -15,7 +15,6 @@ const FcInfo = (props) => {
                         <FocusList focus={props.fc.Focus} />
                     </section>
                     <section>
-                        <h2>Looking For</h2>
                         <SeekingList seeking={props.fc.Seeking} />
                     </section>
                 </>

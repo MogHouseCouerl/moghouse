@@ -10,13 +10,20 @@ const FocusList = (props) => {
 
     return (
         <>
-            {item ? (
-                item.map(focus => {
-                    return <Focus focus={focus} />
-                })
-            ) : (
-                    null
-                )}
+            <h3>Our Focus</h3>
+            <div id='focus'>
+                {item ? (
+                    item.map(focus => {
+                        return (
+
+                            <Focus focus={focus} />
+
+                        )
+                    })
+                ) : (
+                        null
+                    )}
+            </div>
         </>
     )
 }

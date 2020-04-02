@@ -36,3 +36,21 @@
     transform: rotate(360deg);
   }
 }
+
+#focus, #seeking{
+  display: flex;
+  justify-content: space-evenly;
+  margin: 5% auto;
+  width: 80%;
+}
+
+body{
+  background-color: #BF8E2A;
+}
+
+#container{
+  background-color: #815C11;
+  width: 80%;
+  margin: auto;
+  padding: 5%;
+}

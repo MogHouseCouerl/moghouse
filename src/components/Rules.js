@@ -3,9 +3,10 @@ import React from 'react'
 const Rules = () => {
     return (
         <>
+            <h2>Mog House Rules kupo!</h2>
             <header>
                 <div id='container'>
-                    <h2>Mog House Rules kupo!</h2>
+
                     <ol>
                         <li>No offensive messages or nicknames. All Text channels In Game & Discord are PG-13.</li>
                         <li>No spam, this includes loud/obnoxious noises in voice, @mention spam, character spam, image spam, and message spam.</li>

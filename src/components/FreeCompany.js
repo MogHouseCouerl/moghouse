@@ -6,11 +6,11 @@ import Footer from './Footer'
 const FreeCompany = ({ props }) => {
     return (
         <>
+            {props && <Header Estate={props.fc.Estate} />}
             <div id='container'>
-                {props && <Header Estate={props.fc.Estate} />}
                 {props && <FcInfo fc={props.fc} />}
-                {props && <Footer fc={props.fc} estate={props.fc.Estate} />}
             </div>
+            {props && <Footer fc={props.fc} estate={props.fc.Estate} />}
         </>
     )
 }

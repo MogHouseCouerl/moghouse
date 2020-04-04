@@ -12,6 +12,7 @@ const Footer = ({ fc, estate }) => {
                     ) : (
                             null
                         )}
+                    <p>discord: <a href='https://discord.gg/9ZpSgwr'>Join Us on Discord!</a> </p>
                 </footer>
             ) : (
                     null

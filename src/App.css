@@ -51,6 +51,23 @@ body{
 #container{
   background-color: #815C11;
   width: 80%;
-  margin: auto;
+  margin: 2% auto;
   padding: 5%;
+  border: black 2px solid;
+}
+
+
+nav{
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0.5% 0;
+}
+
+nav a{
+  text-decoration: none;
+  color: black;
+  background-color: #815C11;
+  padding: 0.5% 1%;
+  border-radius: 100%;
+  border: 1px black solid;
 }

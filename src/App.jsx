@@ -6,6 +6,8 @@ import { Link, Switch, Route } from 'react-router-dom'
 import FreeCompany from './components/FreeCompany'
 import Rules from './components/Rules'
 import Login from './components/Login'
+import Register from './components/register'
+import PrivateRoute from './components/PrivateRoute'
 import CharacterPage from './components/CharacterPage'
 
 import './App.css';
@@ -21,7 +23,9 @@ function App(props) {
       <nav>
         <Link to='/'>Home</Link>
         <Link to='/rules'>Rules</Link>
-        {/* <Link to='/login'>Log In</Link> */}
+        <Link to='/login'>Log In</Link>
+        <Link to='/register'>Sign up</Link>
+        <Link to='/weekly'>Create Weekly</Link>
       </nav>
       <img id='banner' src={process.env.PUBLIC_URL + '/images/imgbanner.jpeg'} alt='a group picture of the mog house members' />
       <Switch>
@@ -38,9 +42,15 @@ function App(props) {
           <Login />
         </Route>
 
+        <Route path='/register'>
+          <Register />
+        </Route>
+
         <Route path='/characterpage'>
           <CharacterPage />
         </Route>
+
+        <PrivateRoute path='/weekly' />
 
       </Switch>
     </div>

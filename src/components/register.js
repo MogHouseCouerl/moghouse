@@ -23,7 +23,7 @@ const Register = () => {
     }
 
     return (
-        <form>
+        <form onSubmit={handleSubmit}>
             <label htmlFor='username'>User name</label>
             <input id='username' name='username' type='test' />
             <label htmlFor='password'>Password</label>

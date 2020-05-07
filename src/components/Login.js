@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import axios from 'axios'
 
 const Login = () => {
     const [officer, setOfficer] = useState({
@@ -12,7 +13,13 @@ const Login = () => {
 
     const handleSubmit = event => {
         event.preventDefault()
-        //add post request to log in
+        axios.post('https://mogserver.herokuapp.com/api/officers/login', officer)
+            .then(res => {
+                console.log(res)
+            })
+            .catch(err => {
+                console.log(err)
+            })
     }
 
     return (

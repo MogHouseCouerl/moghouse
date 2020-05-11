@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { useHistory } from 'react-router-dom'
 import axios from 'axios'
 
 const Login = () => {
@@ -6,6 +7,8 @@ const Login = () => {
         username: '',
         password: ''
     })
+
+    const history = useHistory()
 
     const handleChange = event => {
         setOfficer({ ...officer, [event.target.name]: event.target.value })
@@ -15,10 +18,11 @@ const Login = () => {
         event.preventDefault()
         axios.post('https://mogserver.herokuapp.com/api/officers/login', officer)
             .then(res => {
-                console.log(res)
+                history.push('/')
+                localStorage.setItem('token', res.data.payload)
             })
             .catch(err => {
-                console.log(err)
+                console.log(err.message)
             })
     }
 

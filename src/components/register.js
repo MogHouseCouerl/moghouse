@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { useHistory } from 'react-router-dom'
 import axios from 'axios'
 
 const Register = () => {
@@ -6,6 +7,8 @@ const Register = () => {
         username: '',
         password: ''
     })
+
+    const history = useHistory()
 
     const handleChange = event => {
         setUser({ ...user, [event.target.name]: event.target.value })
@@ -15,10 +18,10 @@ const Register = () => {
         event.preventDefault()
         axios.post('https://mogserver.herokuapp.com/api/officers/register', user)
             .then(res => {
-                console.log(res)
+                history.push('/login')
             })
             .catch(err => {
-                console.log(err)
+                console.log(err.message)
             })
     }
 

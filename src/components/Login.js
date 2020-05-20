@@ -27,13 +27,12 @@ const Login = () => {
     }
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className='auth'>
             <label htmlFor='username'>Username</label>
             <input name='username' id='username' type='text' value={officer.username} onChange={handleChange} />
             <label htmlFor='password'>Password</label>
             <input name='password' id='password' type='password' value={officer.password} onChange={handleChange} />
             <button type='submit'>Log In</button>
-            <bold>NOT READY</bold>
         </form>
     )
 }

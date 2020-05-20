@@ -9,6 +9,8 @@ import Login from './components/Login'
 import Register from './components/register'
 import PrivateRoute from './components/PrivateRoute'
 import CharacterPage from './components/CharacterPage'
+import WeeklyEvents from './components/events/weeklyEvents'
+import WeeklyEventForm from './components/events/WeeklyEventForm'
 
 import './App.css';
 
@@ -24,8 +26,8 @@ function App(props) {
         <Link to='/'>Home</Link>
         <Link to='/rules'>Rules</Link>
         <Link to='/login'>Log In</Link>
-        <Link to='/register'>Sign up</Link>
-        <Link to='/weekly'>Create Weekly</Link>
+        <Link to='/weekly'>Weekly events</Link>
+        {localStorage.getItem('token') && <Link to='/weeklyform'>Create weekly event</Link>}
       </nav>
       <img id='banner' src={process.env.PUBLIC_URL + '/images/imgbanner.jpeg'} alt='a group picture of the mog house members' />
       <Switch>
@@ -50,7 +52,11 @@ function App(props) {
           <CharacterPage />
         </Route>
 
-        <PrivateRoute path='/weekly' />
+        <PrivateRoute path='/weeklyform' component={WeeklyEventForm} />
+
+        <Route path='/weekly'>
+          <WeeklyEvents />
+        </Route>
 
       </Switch>
     </div>

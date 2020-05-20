@@ -68,6 +68,41 @@ nav a{
   color: black;
   background-color: #815C11;
   padding: 0.5% 1%;
-  border-radius: 100%;
+  border-radius: 50%;
   border: 1px black solid;
+}
+
+.box {
+  background-color: #815C11;
+  width: 40%;
+  margin: 2% auto;
+  padding: 5%;
+  border: black 2px solid;
+}
+
+.auth {
+  background-color: #815C11;
+  width: 50%;
+  margin: 2% auto;
+  padding: 5%;
+  border: black 2px solid;
+}
+
+.form {
+  background-color: #815C11;
+  width: 80%;
+  margin: 2% auto;
+  padding: 5%;
+  border: black 2px solid;
+  display: flex;
+  flex-direction: column;
+}
+
+.form input, label, button{
+  width: 30%;
+  margin: 0.5% auto;
+}
+
+.form button {
+  margin-top: 2%;
 }

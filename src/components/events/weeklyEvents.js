@@ -11,7 +11,6 @@ const WeeklyEvents = () => {
                 setWeekly(res.data)
             })
             .catch(err => {
-                console.log(err.message)
             })
     }, [])
     return (

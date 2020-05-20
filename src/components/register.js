@@ -26,7 +26,7 @@ const Register = () => {
     }
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className='auth'>
             <label htmlFor='username'>User name</label>
             <input id='username' name='username' type='test' onChange={handleChange} />
             <label htmlFor='password'>Password</label>

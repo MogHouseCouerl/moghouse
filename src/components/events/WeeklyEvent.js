@@ -1,9 +1,8 @@
 import React from 'react'
-import WeeklyEvents from './weeklyEvents'
 
 const WeeklyEvent = ({ event }) => {
     return (
-        <div>
+        <div className='box'>
             <h3>Event name: {event.name}</h3>
             <p>Description: {event.description}</p>
             <div>
@@ -13,4 +12,4 @@ const WeeklyEvent = ({ event }) => {
     )
 }
 
-export default WeeklyEvents
+export default WeeklyEvent

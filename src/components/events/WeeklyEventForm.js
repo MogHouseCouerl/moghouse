@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import axiosWithAuth from '../../utils/axiosWithAuth'
-import { useHistort, useHistory } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 
 const WeeklyEventForm = () => {
     const history = useHistory()
@@ -23,12 +23,12 @@ const WeeklyEventForm = () => {
                 history.push('/weekly')
             })
             .catch(err => {
-                console.log(err.message)
+                console.log(err)
             })
     }
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className='form'>
             <label>Event Name</label>
             <input type='text' name='name' id='name' onChange={handleChange} />
             <label>Event Description</label>
@@ -37,6 +37,7 @@ const WeeklyEventForm = () => {
             <input type='text' name='date' id='date' onChange={handleChange} />
             <label>Event Time</label>
             <input type='text' name='time' id='time' onChange={handleChange} />
+            <button type='submit'>Submit weekly event</button>
         </form>
     )
 }

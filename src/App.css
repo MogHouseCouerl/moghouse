@@ -106,3 +106,7 @@ nav a{
 .form button {
   margin-top: 2%;
 }
+
+button {
+  display: block;
+}

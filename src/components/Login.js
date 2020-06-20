@@ -16,7 +16,7 @@ const Login = () => {
 
     const handleSubmit = event => {
         event.preventDefault()
-        axios.post('https://mogserver.herokuapp.com/api/officers/login', officer)
+        axios.post('https://cors-anywhere.herokuapp.com/https://mogserver.herokuapp.com/api/officers/login', officer)
             .then(res => {
                 history.push('/')
                 localStorage.setItem('token', res.data.payload)

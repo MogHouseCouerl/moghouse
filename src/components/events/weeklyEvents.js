@@ -6,7 +6,7 @@ const WeeklyEvents = () => {
     const [weekly, setWeekly] = useState([])
 
     useEffect(() => {
-        axios.get('https://mogserver.herokuapp.com/api/moghouse/weekly')
+        axios.get('https://cors-anywhere.herokuapp.com/https://mogserver.herokuapp.com/api/moghouse/weekly')
             .then(res => {
                 setWeekly(res.data)
             })

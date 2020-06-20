@@ -4,9 +4,9 @@ import axios from 'axios'
 
 const MonthlyEvents = () => {
     const [monthly, setmonthly] = useState([])
-
+    //https://cors-anywhere.herokuapp.com/https://joke-api-strict-cors.appspot.com/jokes/random
     useEffect(() => {
-        axios.get('https://mogserver.herokuapp.com/api/moghouse/monthly')
+        axios.get('https://cors-anywhere.herokuapp.com/https://mogserver.herokuapp.com/api/moghouse/monthly')
             .then(res => {
                 setmonthly(res.data)
             })

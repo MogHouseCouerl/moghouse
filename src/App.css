@@ -110,3 +110,12 @@ nav a{
 button {
   display: block;
 }
+
+.motm{
+  background-color: #815C11;
+  width: fit-content;
+  margin: 2% auto;
+  padding: 1%;
+  border: 1px solid black;
+  border-radius: 100rem;
+}

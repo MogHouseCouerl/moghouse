@@ -26,7 +26,7 @@ function App(props) {
     <div className="App">
       <div className='motm'>
         <h2>Mog Of The Month</h2>
-        <h1>Da Dawg</h1>
+        <h1>Da Gawg</h1>
       </div>
       <nav>
         <Link to='/'>Home</Link>
